@@ -1,0 +1,7 @@
+.sidebar {
+    flex: 1;
+    border-style: dotted;
+  }
+  .folderItem  {
+      border-style: solid;
+  }
