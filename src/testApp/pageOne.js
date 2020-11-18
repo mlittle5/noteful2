@@ -3,7 +3,7 @@ import dummyStore from "../dummy-store";
 import {Link} from 'react-router-dom';
 
 class PageOne extends Component {
-  render(match) {
+  render() {
     const notes = dummyStore.notes.map((note) => {
       return (
         <div key={note.id} className="note">
@@ -15,8 +15,7 @@ class PageOne extends Component {
       );
     });
     return (
-      <div>
-        <h1> Page one!</h1>
+      <div className="notes">
         {notes}
       </div>
     );

@@ -13,7 +13,7 @@ class Homepage extends Component {
       );
     });
     return (
-      <div>
+      <div className="notes">
         {notes}
       </div>
     );

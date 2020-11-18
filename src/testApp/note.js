@@ -10,17 +10,11 @@ class Note extends Component {
     );
     console.log(note);
     return (
-      <article className="Poem">
+      <article className="note">
         <div>
           <h1>{note.name}</h1>
           <p>{note.content}</p>
         </div>
-        {/* <h2>{note.name}</h2>
-          {note.map((p, i) =>
-            (p === '')
-              ? <br key={i} />
-              : <p key={i}>{p}</p>
-          )} */}
       </article>
     );
   }
