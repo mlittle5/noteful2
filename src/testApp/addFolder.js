@@ -26,7 +26,7 @@ class AddFolder extends Component {
           }}
         >
           <label name="name">Folder name: </label>
-          <input id="name" type="text" name="name"></input>
+          <input id="name" type="text" name="name" required></input>
           <button type="submit">Submit</button>
         </form>
       </div>
