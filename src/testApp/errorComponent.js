@@ -8,7 +8,7 @@ class ErrorComponent extends Component {
     return { hasError: true };
   }
   render() {
-    if (this.state.hasError) {      
+    if (this.state.hasError === true) {      
         return (
           <h2>Error!!!!!!</h2>
         );

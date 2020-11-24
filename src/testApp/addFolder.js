@@ -10,14 +10,18 @@ class AddFolder extends Component {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            const name = document.getElementById("name").value;
+            const name = e.target.name.value;
             const options = {
               method: "POST",
-              body: JSON.stringify(name),
-              Endpoint: "/folders"
+              body: JSON.stringify({name}),
+              headers: {
+                "content-type": "application/json"
+              }
             };
-            fetch(options).then((res) => {
-              console.log(options);
+            
+            fetch("http://localhost:9090/folders", options).then((res) => {
+              this.context.getData();
+              this.props.history.push("/")
             });
           }}
         >

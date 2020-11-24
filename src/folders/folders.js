@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 // import '../sidebar.css'
 import { Route } from "react-router-dom";
-import dummyStore from "../dummy-store";
 // import Note from "../testApp/note";
 import {Link} from "react-router-dom"
+import AppContext from "../testApp/context";
 
 class Folders extends Component {
+  static contextType = AppContext
   render() {
     //
-    const notes = dummyStore.notes.filter(
+    const notes = this.context.notes.filter(
       //   dummyStore.notes.find((p) => p.folderId === this.props.match.params.id)
       (NOTES) => NOTES.folderId === this.props.match.params.id
     );

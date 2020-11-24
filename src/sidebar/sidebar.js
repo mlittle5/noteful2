@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import "./sidebar.css";
 import { Link } from "react-router-dom";
+import AppContext from "../testApp/context";
 // import Folders from "../folders/folders";
-import dummyStore from "../dummy-store";
+import PropTypes from 'prop-types'  
 
 class Sidebar extends Component {
+  static contextType = AppContext;
   render() {
-    const folders = dummyStore.folders.map((folder) => {
+    const folders = this.context.folders.map((folder) => {
       return (
         <div key={folder.id} className="folder">
           <h4>{folder.name}</h4>
@@ -30,3 +32,7 @@ class Sidebar extends Component {
 }
 
 export default Sidebar;
+
+Sidebar.propTypes = {
+    value: PropTypes.string
+}
